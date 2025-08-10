@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluesky Firehose Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <h1><i class="fab fa-twitter"></i> <span data-i18n="title">Bluesky Firehose Viewer</span></h1>
+                <div id="languageSelector"></div>
+            </div>
+            <p class="subtitle" data-i18n="subtitle">Live stream of all Bluesky posts</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <button id="startBtn" class="btn btn-primary">
+                    <i class="fas fa-play"></i> <span data-i18n="controls.start">Start</span>
+                </button>
+                <button id="pauseBtn" class="btn btn-warning" disabled>
+                    <i class="fas fa-pause"></i> <span data-i18n="controls.pause">Pause</span>
+                </button>
+                <button id="resumeBtn" class="btn btn-success" disabled>
+                    <i class="fas fa-play"></i> <span data-i18n="controls.resume">Resume</span>
+                </button>
+                <button id="stopBtn" class="btn btn-danger" disabled>
+                    <i class="fas fa-stop"></i> <span data-i18n="controls.stop">Stop</span>
+                </button>
+            </div>
+
+            <div class="filter-group">
+                <label for="filterInput" data-i18n="filter.label">Filter (boolean operators: AND, OR, NOT):</label>
+                <input type="text" id="filterInput" data-i18n-placeholder="filter.placeholder" placeholder="e.g.: cat AND dog OR bird NOT fish" class="filter-input">
+                <button id="clearFilterBtn" class="btn btn-secondary">
+                    <i class="fas fa-times"></i> <span data-i18n="controls.clearFilter">Clear Filter</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="log-container">
+                <div class="log-header">
+                    <h3 data-i18n="log.title">Live Events</h3>
+                    <div class="log-controls">
+                        <button id="clearLogBtn" class="btn btn-sm btn-secondary">
+                            <i class="fas fa-trash"></i> <span data-i18n="controls.clearLog">Clear Log</span>
+                        </button>
+                        <button id="autoScrollBtn" class="btn btn-sm btn-primary active">
+                            <i class="fas fa-arrow-down"></i> <span data-i18n="controls.autoScroll">Auto-Scroll</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="logDisplay" class="log-display"></div>
+            </div>
+        </div>
+
+        <footer class="status-bar">
+            <div class="status-item">
+                <i class="fas fa-signal"></i>
+                <span id="statusText" data-i18n="status.disconnected">Disconnected</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <span id="eventsPerSec">0</span> <span data-i18n="status.eventsPerSec">Events/s</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-database"></i>
+                <span id="bytesPerSec">0</span> <span data-i18n="status.kbPerSec">KB/s</span>
+            </div>
+            <div class="status-item">
+                <i class="fas fa-clock"></i>
+                <span id="timestamp"></span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

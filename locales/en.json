@@ -1,0 +1,47 @@
+{
+  "title": "Bluesky Firehose Viewer",
+  "subtitle": "Live stream of all Bluesky posts",
+  "controls": {
+    "start": "Start",
+    "pause": "Pause",
+    "resume": "Resume",
+    "stop": "Stop",
+    "clearLog": "Clear Log",
+    "autoScroll": "Auto-Scroll",
+    "clearFilter": "Clear Filter"
+  },
+  "filter": {
+    "label": "Filter (boolean operators: AND, OR, NOT):",
+    "placeholder": "e.g.: cat AND dog OR bird NOT fish"
+  },
+  "log": {
+    "title": "Live Events",
+    "newPost": "📝 New Post",
+    "deletedPost": "🗑️ Deleted Post",
+    "path": "Path"
+  },
+  "status": {
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "connectionLost": "Connection lost - Reconnecting...",
+    "eventsPerSec": "Events/s",
+    "kbPerSec": "KB/s",
+    "connectedToJetStream": "Connected to JetStream",
+    "connectedToFirehose": "Connected to Bluesky Firehose",
+    "disconnectedFromJetStream": "Disconnected from JetStream",
+    "disconnectedFromFirehose": "Disconnected from Bluesky Firehose",
+    "connectionError": "Connection error",
+    "allEndpointsFailed": "All endpoints failed",
+    "failedToConnect": "Failed to connect to Bluesky Firehose"
+  },
+  "keyboard": {
+    "startStop": "Start/Stop",
+    "pauseResume": "Pause/Resume",
+    "clearLog": "Clear Log",
+    "filterFocus": "Filter Focus"
+  },
+  "errors": {
+    "parsingError": "Error parsing event",
+    "connectionError": "Connection error"
+  }
+}

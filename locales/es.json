@@ -1,0 +1,47 @@
+{
+  "title": "Visor de Bluesky Firehose",
+  "subtitle": "Transmisión en vivo de todas las publicaciones de Bluesky",
+  "controls": {
+    "start": "Iniciar",
+    "pause": "Pausar",
+    "resume": "Reanudar",
+    "stop": "Detener",
+    "clearLog": "Limpiar Log",
+    "autoScroll": "Auto-Desplazamiento",
+    "clearFilter": "Limpiar Filtro"
+  },
+  "filter": {
+    "label": "Filtro (operadores booleanos: AND, OR, NOT):",
+    "placeholder": "ej.: gato AND perro OR pájaro NOT pez"
+  },
+  "log": {
+    "title": "Eventos en Vivo",
+    "newPost": "📝 Nueva Publicación",
+    "deletedPost": "🗑️ Publicación Eliminada",
+    "path": "Ruta"
+  },
+  "status": {
+    "connected": "Conectado",
+    "disconnected": "Desconectado",
+    "connectionLost": "Conexión perdida - Reconectando...",
+    "eventsPerSec": "Eventos/s",
+    "kbPerSec": "KB/s",
+    "connectedToJetStream": "Conectado a JetStream",
+    "connectedToFirehose": "Conectado a Bluesky Firehose",
+    "disconnectedFromJetStream": "Desconectado de JetStream",
+    "disconnectedFromFirehose": "Desconectado de Bluesky Firehose",
+    "connectionError": "Error de conexión",
+    "allEndpointsFailed": "Todos los endpoints fallaron",
+    "failedToConnect": "Error al conectar con Bluesky Firehose"
+  },
+  "keyboard": {
+    "startStop": "Iniciar/Detener",
+    "pauseResume": "Pausar/Reanudar",
+    "clearLog": "Limpiar Log",
+    "filterFocus": "Enfoque de Filtro"
+  },
+  "errors": {
+    "parsingError": "Error al analizar el evento",
+    "connectionError": "Error de conexión"
+  }
+}
