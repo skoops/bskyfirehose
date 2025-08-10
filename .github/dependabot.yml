@@ -1,0 +1,51 @@
+# Dependabot configuration for Bluesky Firehose Viewer
+# https://docs.github.com/en/code-security/dependabot/dependabot-version-updates
+
+version: 2
+updates:
+  # Enable version updates for npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "UTC"
+    # Group minor and patch updates together
+    groups:
+      minor-and-patch:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    # Allow up to 10 open pull requests
+    open-pull-requests-limit: 10
+    # Automatically merge patch updates
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    # Add labels to pull requests
+    labels:
+      - "dependencies"
+      - "npm"
+    # Reviewers for the pull requests
+    reviewers:
+      - "your-github-username"
+    # Assignees for the pull requests
+    assignees:
+      - "your-github-username"
+    # Target specific branches
+    target-branch: "main"
+    # Rebase strategy
+    rebase-strategy: "auto"
+    # Versioning strategy
+    versioning-strategy: "auto"
+    # Allow updates to pre-release versions
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    # Ignore development dependencies in production
+    ignore:
+      - dependency-name: "nodemon"
+        update-types: ["version-update:semver-major"]
