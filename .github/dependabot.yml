@@ -31,10 +31,10 @@ updates:
       - "npm"
     # Reviewers for the pull requests
     reviewers:
-      - "your-github-username"
+      - "skoops"
     # Assignees for the pull requests
     assignees:
-      - "your-github-username"
+      - "skoops"
     # Target specific branches
     target-branch: "main"
     # Rebase strategy
