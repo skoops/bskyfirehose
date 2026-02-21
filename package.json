@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@atproto/api": "^0.16.2",
-    "cbor": "^8.1.0",
+    "cbor": "^10.0.10",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "socket.io": "^4.7.2",
